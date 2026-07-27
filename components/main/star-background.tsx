@@ -65,7 +65,7 @@ export const StarsCanvas = () => {
   const [rotationSpeed] = useState(1.1);
 
   return (
-    <div className="w-full h-auto fixed inset-0 -z-10">
+    <div className="w-full fixed inset-0 -z-10" style={{ height: '100dvh', minHeight: '100vh' }}>
       <Canvas camera={{ position: [0, 0.7, 1.2] }} dpr={typeof window !== 'undefined' ? Math.min(window.devicePixelRatio, 1.5) : 1}>
         <Suspense fallback={null}>
           <StarBackground sizeScale={sizeScale} rotationSpeed={rotationSpeed} />
