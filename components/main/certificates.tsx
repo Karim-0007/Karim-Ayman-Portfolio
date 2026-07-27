@@ -65,7 +65,7 @@ export const Certificates = () => {
       </motion.div>
 
       {/* Cards grid */}
-      <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-10 max-w-6xl">
+      <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8 max-w-full">
         {visibleCertificates.map((cert, i) => (
           <PdfCard
             key={cert.title}

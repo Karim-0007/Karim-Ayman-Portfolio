@@ -123,7 +123,7 @@ export const Credentials = () => {
       </motion.div>
 
       {/* cards grid */}
-      <div className="w-full max-w-6xl px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <div className="w-full max-w-full px-2 sm:px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         {CREDENTIALS.map((cred, i) => (
           <motion.div
             key={cred.id}

@@ -15,10 +15,10 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 md:px-12 lg:px-20 mt-20 md:mt-30 w-full z-[20] gap-12 lg:gap-20"
+      className="flex flex-col lg:flex-row items-center justify-center px-2 sm:px-4 md:px-8 lg:px-12 mt-20 md:mt-30 w-full z-[20] gap-12 lg:gap-20"
     >
       {/* Content Section */}
-      <div className="h-full w-full lg:w-[60%] flex flex-col gap-5 justify-center text-start rounded-[32px] border border-[#7042f833] bg-[rgba(3,0,20,0.62)] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 backdrop-blur-sm">
+      <div className="h-auto min-h-[450px] sm:min-h-[500px] w-full lg:w-[60%] flex flex-col gap-5 justify-center text-start rounded-[32px] border border-[#7042f833] bg-[rgba(3,0,20,0.62)] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 backdrop-blur-sm">
         <motion.div
           variants={slideInFromTop}
           className="rounded-[32px] shadow-[0_0_18px_4px_rgba(113,47,255,0.35),0_0_40px_8px_rgba(180,155,255,0.15)]"
@@ -138,7 +138,7 @@ export const HeroContent = () => {
           height={650}
           width={650}
           draggable={false}
-          loading="eager"
+          priority
           className="box select-none w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] h-auto cursor-pointer object-bottom border-4 border-[#7042f88b] rounded-full opacity-[0.7] transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-90 hover:border-purple-500/50"
         />
       </motion.div>

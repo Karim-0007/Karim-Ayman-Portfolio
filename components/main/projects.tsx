@@ -64,7 +64,7 @@ export const Projects = () => {
       </motion.div>
 
       {/* 3D Models Grid */}
-      <div className="w-full max-w-6xl px-4 sm:px-6">
+      <div className="w-full max-w-full px-2 sm:px-4 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
           {FEATURED_3D_MODELS.map((model) => (
             <ModelShowcaseCard
