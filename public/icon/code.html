@@ -1,0 +1,28 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Orbits -->
+  <ellipse cx="512" cy="512" rx="450" ry="200" transform="rotate(0 512 512)" stroke="#00F2FF" stroke-width="20" stroke-linecap="round" filter="url(#glow)"/>
+  <ellipse cx="512" cy="512" rx="450" ry="200" transform="rotate(60 512 512)" stroke="#B026FF" stroke-width="20" stroke-linecap="round" filter="url(#glow)"/>
+  <ellipse cx="512" cy="512" rx="450" ry="200" transform="rotate(120 512 512)" stroke="#00F2FF" stroke-width="20" stroke-linecap="round" filter="url(#glow)"/>
+  
+  <!-- Central Nucleus Glow -->
+  <circle cx="512" cy="512" r="80" fill="url(#nucleusGradient)" filter="url(#nucleusGlow)"/>
+  
+  <!-- Definitions for Gradients and Glows -->
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="nucleusGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <radialGradient id="nucleusGradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(80)">
+      <stop offset="0%" stop-color="#00F2FF" />
+      <stop offset="50%" stop-color="#B026FF" />
+      <stop offset="100%" stop-color="#5B00FF" stop-opacity="0.8" />
+    </radialGradient>
+  </defs>
+</svg>
