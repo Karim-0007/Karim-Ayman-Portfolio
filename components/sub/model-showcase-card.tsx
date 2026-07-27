@@ -203,7 +203,7 @@ export const ModelShowcaseCard = ({
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="relative w-full h-full max-w-7xl max-h-[90vh] bg-[rgba(3,0,20,0.95)] rounded-2xl border border-purple-500/30 overflow-hidden"
+              className="relative w-full h-full max-w-6xl max-h-[85vh] bg-[rgba(3,0,20,0.95)] rounded-2xl border border-purple-500/30 overflow-hidden mx-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}

@@ -15,7 +15,7 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 md:px-12 lg:px-20 mt-20 md:mt-30 w-full z-[20] gap-6 lg:gap-12"
+      className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 md:px-12 lg:px-20 mt-20 md:mt-30 w-full z-[20] gap-12 lg:gap-20"
     >
       {/* Content Section */}
       <div className="h-full w-full lg:w-[60%] flex flex-col gap-5 justify-center text-start rounded-[32px] border border-[#7042f833] bg-[rgba(3,0,20,0.62)] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 backdrop-blur-sm">
@@ -139,7 +139,7 @@ export const HeroContent = () => {
           width={650}
           draggable={false}
           loading="eager"
-          className="box select-none w-[200px] sm:w-[260px] md:w-[300px] lg:w-[380px] h-auto cursor-pointer object-center border-4 border-[#7042f88b] rounded-full opacity-[0.7] transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-90 hover:border-purple-500/50"
+          className="box select-none w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] h-auto cursor-pointer object-bottom border-4 border-[#7042f88b] rounded-full opacity-[0.7] transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-90 hover:border-purple-500/50"
         />
       </motion.div>
     </motion.div>
