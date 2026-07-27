@@ -133,7 +133,7 @@ export const HeroContent = () => {
         className="w-full lg:w-auto h-full flex justify-center items-center mt-8 lg:mt-0"
       >
         <Image
-          src="/myphoto3.png"
+          src="/myphoto.png"
           alt="Karim Ayman - BIM Modeler & Technical Office Draftsman"
           height={650}
           width={650}
