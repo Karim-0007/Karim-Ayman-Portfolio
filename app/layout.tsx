@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Footer } from "@/components/main/footer";
 import { Navbar } from "@/components/main/navbar";
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           {children}
           <Footer />
         </SmoothScrollProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
