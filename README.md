@@ -46,25 +46,32 @@ Here is the folder structure of this app.
 <!--- FOLDER_STRUCTURE_START --->
 ```bash
 space-portfolio/
+  |- .kiro/
+    |-- specs/
   |- app/
     |-- apple-icon.png
-    |-- favicon.ico
     |-- globals.css
+    |-- icon.png
     |-- icon1.png
     |-- icon2.png
     |-- layout.tsx
     |-- page.tsx
   |- components/
     |-- main/
+    |-- providers/
     |-- sub/
+    |-- ui/
   |- config/
     |-- index.ts
   |- constants/
     |-- index.ts
   |- lib/
     |-- motion.ts
+    |-- scroll-effects.ts
     |-- utils.ts
   |- public/
+  |- scripts/
+    |-- optimize-textures.js
   |- .eslintrc.json
   |- .gitignore
   |- eslint.config.mjs
@@ -128,15 +135,18 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [eslint](https://www.npmjs.com/package/eslint): ^10.4.0
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.2.6
 - [framer-motion](https://www.npmjs.com/package/framer-motion): ^12.40.0
+- [lenis](https://www.npmjs.com/package/lenis): 1.3.25
 - [next](https://www.npmjs.com/package/next): 16.2.6
+- [ogl](https://www.npmjs.com/package/ogl): ^1.0.11
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [react](https://www.npmjs.com/package/react): 19.2.6
 - [react-dom](https://www.npmjs.com/package/react-dom): 19.2.6
 - [react-icons](https://www.npmjs.com/package/react-icons): ^5.6.0
 - [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^10.0.3
+- [swiper](https://www.npmjs.com/package/swiper): 11.2.10
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
-- [three](https://www.npmjs.com/package/three): ^0.184.0
+- [three](https://www.npmjs.com/package/three): ^0.185.1
 - [typescript](https://www.npmjs.com/package/typescript): ^6
 
 <!--- DEPENDENCIES_END --->
