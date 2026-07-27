@@ -139,7 +139,7 @@ export const HeroContent = () => {
           width={650}
           draggable={false}
           loading="eager"
-          className="box select-none w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] h-auto cursor-pointer object-top border-4 border-[#7042f88b] rounded-full opacity-[0.7] transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-90 hover:border-purple-500/50 mb-8 lg:mb-100"
+          className="box select-none w-[220px] sm:w-[280px] md:w-[320px] lg:w-[400px] h-auto cursor-pointer object-top border-4 border-[#7042f88b] rounded-full opacity-[0.7] transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-90 hover:border-purple-500/50 mb-8 lg:mb-100"
         />
       </motion.div>
     </motion.div>
