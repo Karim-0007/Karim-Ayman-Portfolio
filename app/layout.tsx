@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import { Footer } from "@/components/main/footer";
 import { Navbar } from "@/components/main/navbar";
 import { StarsCanvas } from "@/components/main/star-background";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
@@ -25,7 +24,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <StarsCanvas />
           <Navbar />
           {children}
-          <Footer />
         </SmoothScrollProvider>
         <SpeedInsights />
       </body>
