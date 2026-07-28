@@ -15,7 +15,7 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col lg:flex-row items-center justify-center px-2 sm:px-4 md:px-8 lg:px-12 mt-20 md:mt-30 w-full z-[20] gap-12 lg:gap-20 pb-10"
+      className="flex flex-col lg:flex-row p-30 items-center justify-evenly px-2 sm:px-4 md:px-8 lg:px-12 mt-20 md:mt-30 w-full z-[20] gap-12 lg:gap-20 pb-10"
     >
       {/* Content Section */}
       <div className="h-auto w-full lg:w-[60%] flex flex-col gap-5 justify-center text-start rounded-[32px] border border-[#7042f833] bg-[rgba(3,0,20,0.62)] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 backdrop-blur-sm">
@@ -135,11 +135,11 @@ export const HeroContent = () => {
         <Image
           src="/myphoto.png"
           alt="Karim Ayman - BIM Modeler & Technical Office Draftsman"
-          height={650}
-          width={650}
+          height={750}
+          width={750}
           draggable={false}
           priority
-          className="box select-none w-[300px] h-auto cursor-pointer object-bottom border-4 border-[#7042f88b] rounded-full opacity-[0.7] transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-90 hover:border-purple-500/50"
+          className="box select-none w-[400px] h-auto cursor-pointer object-bottom border-4 border-[#7042f88b] rounded-full opacity-[0.7] transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-90 hover:border-purple-500/50"
         />
       </motion.div>
     </motion.div>

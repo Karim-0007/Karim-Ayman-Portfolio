@@ -6,8 +6,8 @@ import dynamic from "next/dynamic";
 import { CubeIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
 // Lazy load the 3D viewer only when modal opens
-const RevitModelViewer = dynamic(
-  () => import("./revit-model-viewer").then((mod) => ({ default: mod.RevitModelViewer })),
+const ModelViewer = dynamic(
+  () => import("./model-viewer").then((mod) => ({ default: mod.ModelViewer })),
   { 
     ssr: false,
     loading: () => (
@@ -217,10 +217,10 @@ export const ModelShowcaseCard = ({
 
               {/* 3D Viewer */}
               <div className="w-full h-full">
-                <RevitModelViewer 
+                <ModelViewer 
                   modelUrl={modelUrl} 
                   title={title}
-                  scale={scale}
+                  poster={thumbnailUrl}
                 />
               </div>
             </motion.div>
