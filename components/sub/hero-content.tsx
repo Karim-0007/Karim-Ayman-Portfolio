@@ -54,11 +54,7 @@ export const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-[13px] sm:text-[15px] text-gray-200 my-6 sm:my-10 max-w-[800px] leading-6 sm:leading-7"
         >
-          I bring precision to complex structures — on paper and in BIM.
-          Over the past 5+ years , I've delivered shop drawings, reinforcement details, 
-          and BIM documentation on Egypt's most technically demanding infrastructure, 
-          including the El Dabaa Nuclear Power Plant, 
-          under strict international compliance standards.
+          BIM Modeler & Technical Office Draftsman with 5+ years of experience specializing in structural shop drawings, reinforcement details, and As-Built documentation for mega infrastructure projects, including the El-Dabaa Nuclear Power Plant. My superpower? I code. This unique combination of engineering precision and full-stack development capabilities sets me apart — from modeling complex structures in Revit to building this portfolio from scratch.
         </motion.p>
 
         <motion.div
