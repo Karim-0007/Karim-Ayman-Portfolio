@@ -149,7 +149,7 @@ export const ExperienceCard = ({
         {/* header */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
           <div>
-            <h2 className="text-[17px] font-bold text-white leading-snug">{company}</h2>
+            <h3 className="text-[17px] font-bold text-white leading-snug">{company}</h3>
             <p className="text-[13px] font-semibold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mt-0.5">
               {role}
             </p>

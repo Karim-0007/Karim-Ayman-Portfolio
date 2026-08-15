@@ -55,9 +55,9 @@ export const Certificates = () => {
           </div>
         </div>
 
-        <h1 className="text-[28px] sm:text-[36px] md:text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
+        <h2 className="text-[28px] sm:text-[36px] md:text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
           My Certificates
-        </h1>
+        </h2>
         <p className="text-gray-400 text-center mt-2 sm:mt-3 max-w-[600px] text-[13px] sm:text-[15px] leading-6 sm:leading-7 px-4">
           Verified credentials from accredited training programs, reflecting
           my commitment to professional growth in BIM and design technology.

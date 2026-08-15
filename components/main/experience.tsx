@@ -109,9 +109,9 @@ export const Experience = () => {
           </div>
         </div>
 
-        <h1 className="text-[28px] sm:text-[36px] md:text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
+        <h2 className="text-[28px] sm:text-[36px] md:text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
           Experience & Credentials
-        </h1>
+        </h2>
         <p className="text-gray-400 text-center mt-2 sm:mt-3 max-w-[600px] text-[13px] sm:text-[15px] leading-6 sm:leading-7">
           5+ years delivering precision engineering documentation on Egypt's most technically demanding infrastructure projects.
         </p>
