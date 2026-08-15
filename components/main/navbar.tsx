@@ -49,8 +49,8 @@ export const Navbar = () => {
     <nav
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-[#03001460] shadow-lg shadow-[#2A0E61]/50 backdrop-blur-xl"
-          : "bg-transparent backdrop-blur-sm"
+          ? "bg-[#030014]/95 shadow-lg shadow-[#2A0E61]/50"
+          : "bg-[#030014]/80"
       }`}
     >
       <div className="mx-auto flex h-[65px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10">
@@ -135,7 +135,7 @@ export const Navbar = () => {
 
         {/* ── Desktop nav links (centered pill) ── */}
         <div className="absolute left-1/2 hidden h-full -translate-x-1/2 items-center xl:flex">
-          <div className="flex items-center gap-1 rounded-full border border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.50)] px-3 py-2 backdrop-blur-md">
+          <div className="flex items-center gap-1 rounded-full border border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.85)] px-3 py-2">
             {NAV_LINKS.map((link) => {
               const id = link.link.replace("#", "");
               const isActive = activeSection === id;
@@ -249,7 +249,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="absolute left-0 top-[65px] w-full border-t border-[#7042f84d] bg-[#030014f0] px-6 py-6 backdrop-blur-xl xl:hidden"
+            className="absolute left-0 top-[65px] w-full border-t border-[#7042f84d] bg-[#030014]/98 px-6 py-6 xl:hidden"
           >
             <div className="flex flex-col items-center gap-3">
               {NAV_LINKS.map((link, i) => (

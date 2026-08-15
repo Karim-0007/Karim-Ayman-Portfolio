@@ -18,7 +18,7 @@ export const HeroContent = () => {
       className="flex flex-col lg:flex-row p-30 items-center justify-evenly px-2 sm:px-4 md:px-8 lg:px-12 mt-20 md:mt-30 w-full z-[20] gap-12 lg:gap-20 pb-10"
     >
       {/* Content Section */}
-      <div className="h-auto w-full lg:w-[60%] flex flex-col gap-5 justify-center text-start rounded-[32px] border border-[#7042f833] bg-[rgba(3,0,20,0.62)] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 backdrop-blur-sm">
+      <div className="h-auto w-full lg:w-[60%] flex flex-col gap-5 justify-center text-start rounded-[32px] border border-[#7042f833] bg-[rgba(3,0,20,0.92)] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10">
         <motion.div
           variants={slideInFromTop}
           className="rounded-[32px] shadow-[0_0_18px_4px_rgba(113,47,255,0.35),0_0_40px_8px_rgba(180,155,255,0.15)]"
@@ -26,9 +26,9 @@ export const HeroContent = () => {
         >
           <div className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b]">
             <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5 drop-shadow-[0_0_6px_rgba(180,155,255,0.9)]" />
-            <h1 className="Welcome-text text-[10px] sm:text-[13px] font-semibold">
+            <p className="Welcome-text text-[10px] sm:text-[13px] font-semibold">
               Ready for a new chapter
-            </h1>
+            </p>
           </div>
         </motion.div>
 
@@ -36,18 +36,18 @@ export const HeroContent = () => {
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-4 sm:gap-6 mt-4 sm:mt-6 text-white max-w-[700px] w-auto h-auto"
         >
-          <span className="text-[32px] sm:text-[40px] md:text-[48px] font-bold leading-tight text-white">
+          <h1 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold leading-tight text-white">
             <span className="inline-block bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent">
               K
             </span>
             arim Ayman 
-          </span>
-          <span className="text-[20px] sm:text-[24px] md:text-[30px] leading-tight text-white">
+          </h1>
+          <h2 className="text-[20px] sm:text-[24px] md:text-[30px] leading-tight text-white">
             BIM Modeler & Technical Office Draftsman {" "}
             <span className="inline-block font-bold bg-gradient-to-r from-purple-700 to-cyan-500 bg-clip-text text-transparent">
                Structural & Architectural
             </span>
-          </span>
+          </h2>
         </motion.div>
 
         <motion.p

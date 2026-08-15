@@ -68,7 +68,7 @@ export const ModelShowcaseCard = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="group relative flex flex-col rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.62)] backdrop-blur-sm shadow-lg hover:border-purple-500/60 transition-all duration-300 overflow-hidden"
+        className="group relative flex flex-col rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.92)] shadow-lg hover:border-purple-500/60 transition-all duration-300 overflow-hidden"
       >
         {/* Thumbnail */}
         <div 

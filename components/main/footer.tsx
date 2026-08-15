@@ -1,7 +1,7 @@
 import { FOOTER_DATA } from "@/constants";
 
 export const Footer = () => (
-  <footer className="w-full bg-black/10 backdrop-blur-sm text-gray-200 border-t border-purple-500/20 mt-20">
+  <footer className="w-full bg-black/80 text-gray-200 border-t border-purple-500/20 mt-20">
     <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center p-8 sm:p-12">
       <div className="w-full h-full flex flex-col sm:flex-row items-center justify-around flex-wrap gap-8 sm:gap-12">
         {FOOTER_DATA.map((column) => (

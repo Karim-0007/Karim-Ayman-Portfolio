@@ -5,8 +5,19 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export const Preloader = () => {
   const [showPreloader, setShowPreloader] = useState(true);
+  const [particles, setParticles] = useState<Array<{ id: number; left: number; top: number; duration: number; delay: number }>>([]);
 
   useEffect(() => {
+    // توليد الجزيئات العشوائية فقط في Client
+    const generatedParticles = [...Array(20)].map((_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      duration: 3 + Math.random() * 2,
+      delay: Math.random() * 2,
+    }));
+    setParticles(generatedParticles);
+
     // منع التمرير أثناء ظهور الـ Preloader
     document.body.style.overflow = "hidden";
 
@@ -63,22 +74,22 @@ export const Preloader = () => {
 
           {/* جزيئات متطايرة خفيفة */}
           <div className="absolute inset-0">
-            {[...Array(20)].map((_, i) => (
+            {particles.map((particle) => (
               <motion.div
-                key={i}
+                key={particle.id}
                 className="absolute w-1 h-1 bg-white/20 rounded-full"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
+                  left: `${particle.left}%`,
+                  top: `${particle.top}%`,
                 }}
                 animate={{
                   y: [0, -30, 0],
                   opacity: [0, 1, 0],
                 }}
                 transition={{
-                  duration: 3 + Math.random() * 2,
+                  duration: particle.duration,
                   repeat: Infinity,
-                  delay: Math.random() * 2,
+                  delay: particle.delay,
                   ease: "easeInOut",
                 }}
               />

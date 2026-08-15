@@ -32,7 +32,7 @@ export const PdfCard = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative flex flex-col overflow-hidden rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.62)] backdrop-blur-sm shadow-lg hover:border-purple-500/70 transition-colors duration-300 group"
+      className="relative flex flex-col overflow-hidden rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.92)] shadow-lg hover:border-purple-500/70 transition-colors duration-300 group"
     >
       {/* top glow line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-600 via-cyan-400 to-transparent z-10" />

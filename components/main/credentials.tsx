@@ -131,7 +131,7 @@ export const Credentials = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="relative flex flex-col rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.62)] backdrop-blur-sm overflow-hidden shadow-lg hover:border-purple-500/60 transition-colors duration-300 h-full"
+            className="relative flex flex-col rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.92)] overflow-hidden shadow-lg hover:border-purple-500/60 transition-colors duration-300 h-full"
             style={{ boxShadow: `0 0 30px 2px ${cred.glow}22` }}
           >
             {/* top glow line with accent color */}

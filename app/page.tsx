@@ -1,7 +1,7 @@
 import { Certificates } from "@/components/main/certificates";
 import { Credentials } from "@/components/main/credentials";
 import { Experience } from "@/components/main/experience";
-import { Hero } from "@/components/main/hero";
+import { Hero } from "@/components/main/hero-optimized";
 import { Projects } from "@/components/main/projects";
 import { Skills } from "@/components/main/skills";
 import { Footer } from "@/components/main/footer";

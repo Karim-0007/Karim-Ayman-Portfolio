@@ -60,7 +60,7 @@ export const ExperienceCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.15, duration: 0.5 }}
-      className="relative flex flex-col rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.62)] backdrop-blur-sm shadow-lg hover:border-purple-500/60 transition-colors duration-300 overflow-hidden"
+      className="relative flex flex-col rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.92)] shadow-lg hover:border-purple-500/60 transition-colors duration-300 overflow-hidden"
     >
       {/* top glow line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent z-10" />
@@ -105,30 +105,30 @@ export const ExperienceCard = ({
             <>
               <button
                 onClick={() => go(-1)}
-                aria-label="Previous"
-                className="absolute left-2 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-black/50 border border-white/10 text-white hover:bg-purple-700/70 transition-all duration-200"
+                aria-label="Previous image"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                <ChevronLeftIcon className="w-4 h-4" />
+                <ChevronLeftIcon className="w-5 h-5" />
               </button>
               <button
                 onClick={() => go(1)}
-                aria-label="Next"
-                className="absolute right-2 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-black/50 border border-white/10 text-white hover:bg-purple-700/70 transition-all duration-200"
+                aria-label="Next image"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                <ChevronRightIcon className="w-4 h-4" />
+                <ChevronRightIcon className="w-5 h-5" />
               </button>
 
               {/* pagination dots - enhanced */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/10">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2 bg-black/80 rounded-full px-3 py-2 border border-white/10">
                 {images.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
                     aria-label={`Go to image ${i + 1}`}
-                    className={`transition-all duration-300 rounded-full ${
+                    className={`transition-all duration-300 rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-purple-500 ${
                       i === current 
-                        ? "h-2 w-6 bg-gradient-to-r from-purple-400 to-cyan-400 shadow-[0_0_8px_rgba(168,85,247,0.6)]" 
-                        : "h-2 w-2 bg-white/40 hover:bg-white/60"
+                        ? "w-3 h-3 bg-gradient-to-r from-purple-400 to-cyan-400 shadow-[0_0_8px_rgba(168,85,247,0.6)]" 
+                        : "w-3 h-3 bg-white/40 hover:bg-white/60"
                     }`}
                   />
                 ))}
@@ -148,16 +148,16 @@ export const ExperienceCard = ({
         {/* header */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
           <div>
-            <h3 className="text-[17px] font-bold text-white leading-snug">{company}</h3>
+            <h2 className="text-[17px] font-bold text-white leading-snug">{company}</h2>
             <p className="text-[13px] font-semibold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mt-0.5">
               {role}
             </p>
           </div>
           <div className="flex flex-col items-start sm:items-end gap-1 flex-shrink-0">
-            <span className="text-[11px] font-medium text-gray-400 bg-[rgba(113,47,255,0.15)] border border-purple-500/30 rounded-full px-3 py-1">
+            <span className="text-[11px] font-medium text-gray-300 bg-[rgba(113,47,255,0.15)] border border-purple-500/30 rounded-full px-3 py-1">
               {period}
             </span>
-            <span className="text-[11px] text-gray-500">{location}</span>
+            <span className="text-[11px] text-gray-300">{location}</span>
           </div>
         </div>
 

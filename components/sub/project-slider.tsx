@@ -33,7 +33,7 @@ export const ProjectSlider = ({ title, company, images, index }: ProjectSliderPr
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.15, duration: 0.5 }}
-      className="relative flex flex-col rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.62)] backdrop-blur-sm overflow-hidden shadow-lg hover:border-purple-500/60 transition-colors duration-300 group"
+      className="relative flex flex-col rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.92)] overflow-hidden shadow-lg hover:border-purple-500/60 transition-colors duration-300 group"
     >
       {/* top glow line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent z-10" />
@@ -69,27 +69,27 @@ export const ProjectSlider = ({ title, company, images, index }: ProjectSliderPr
             <button
               onClick={() => go(-1)}
               aria-label="Previous image"
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-black/50 border border-white/10 text-white hover:bg-purple-700/70 transition-all duration-200"
+              className="absolute left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              <ChevronLeftIcon className="w-4 h-4" />
+              <ChevronLeftIcon className="w-5 h-5" />
             </button>
             <button
               onClick={() => go(1)}
               aria-label="Next image"
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-black/50 border border-white/10 text-white hover:bg-purple-700/70 transition-all duration-200"
+              className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              <ChevronRightIcon className="w-4 h-4" />
+              <ChevronRightIcon className="w-5 h-5" />
             </button>
 
             {/* dots */}
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
               {images.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
                   aria-label={`Go to image ${i + 1}`}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === current ? "w-5 bg-white" : "w-1.5 bg-white/40"
+                  className={`rounded-full transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-purple-500 ${
+                    i === current ? "w-4 h-4 bg-white shadow-[0_0_8px_rgba(168,85,247,0.6)]" : "w-3 h-3 bg-white/40 hover:bg-white/60"
                   }`}
                 />
               ))}
@@ -106,9 +106,9 @@ export const ProjectSlider = ({ title, company, images, index }: ProjectSliderPr
       {/* info */}
       <div className="p-4">
         <h3 className="text-[16px] font-bold text-white leading-snug">{title}</h3>
-        <p className="text-[12px] text-purple-400 mt-1">{company}</p>
+        <p className="text-[12px] text-purple-300 mt-1">{company}</p>
         {images[current].label && (
-          <p className="text-[11px] text-gray-500 mt-1 italic">{images[current].label}</p>
+          <p className="text-[11px] text-gray-300 mt-1 italic">{images[current].label}</p>
         )}
       </div>
     </motion.div>

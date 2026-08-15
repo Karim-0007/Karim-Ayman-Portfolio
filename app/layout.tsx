@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import { Navbar } from "@/components/main/navbar";
-import { Preloader } from "@/components/main/preloader";
-import { StarsCanvas } from "@/components/main/star-background";
+import { Navbar } from "@/components/main/navbar-optimized";
+import { PreloaderWrapper } from "@/components/main/preloader-wrapper";
+import { StarsCanvas } from "@/components/main/star-background-optimized";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("bg-[#030014] overflow-y-scroll overflow-x-hidden")} >
-        <Preloader />
+        <PreloaderWrapper />
         <SmoothScrollProvider>
           <StarsCanvas />
           <Navbar />
