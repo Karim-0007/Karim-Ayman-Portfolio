@@ -87,6 +87,10 @@ export const ExperienceCard = ({
                 src={images[current].src}
                 alt={images[current].label ?? company}
                 fill
+                loading="lazy"
+                quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
                 className="object-cover object-center pointer-events-none"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
