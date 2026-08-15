@@ -37,7 +37,7 @@ export const Footer = () => (
         <p className="text-[13px] sm:text-[14px]">
           © Karim Ayman {new Date().getFullYear()}. All rights reserved.
         </p>
-        <p className="text-[11px] sm:text-[12px] mt-2 text-gray-500">
+        <p className="text-[11px] sm:text-[12px] mt-2 text-gray-400">
           Designed & Built by Karim Ayman using Next.js & React
         </p>
       </div>

@@ -148,16 +148,30 @@ export const HeroContent = memo(() => {
         className="hidden lg:flex w-full lg:w-auto h-full justify-center items-center lg:self-center"
         style={{ willChange: "transform, opacity" }}
       >
-        <Image
-          src="/myphoto.png"
-          alt="Karim Ayman - BIM Modeler & Technical Office Draftsman"
-          height={750}
-          width={750}
-          draggable={false}
-          priority
-          className="box select-none w-[400px] h-auto cursor-pointer object-bottom border-4 border-[#7042f88b] rounded-full opacity-[0.7] transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-90 hover:border-purple-500/50"
-          style={{ willChange: "transform" }}
-        />
+        <motion.div
+          whileHover={{ scale: 1.05, opacity: 0.9 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          style={{ willChange: "transform, opacity" }}
+          className="relative"
+        >
+          <Image
+            src="/myphoto.png"
+            alt="Karim Ayman - BIM Modeler & Technical Office Draftsman"
+            height={750}
+            width={750}
+            draggable={false}
+            priority
+            className="box select-none w-[400px] h-auto object-bottom border-4 border-[#7042f88b] rounded-full opacity-70"
+            style={{ transform: "translateZ(0)" }}
+          />
+          <motion.div
+            className="absolute inset-0 border-4 border-purple-500/50 rounded-full pointer-events-none"
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            style={{ transform: "translateZ(0)" }}
+          />
+        </motion.div>
       </motion.div>
     </motion.div>
   );
