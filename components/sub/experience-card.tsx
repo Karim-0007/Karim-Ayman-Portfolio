@@ -44,7 +44,7 @@ export const ExperienceCard = ({
     exit: (d: number) => ({ x: d > 0 ? -260 : 260, opacity: 0 }),
   };
 
-  const handleDragEnd = (e: any, { offset, velocity }: any) => {
+  const handleDragEnd = (_e: any, { offset, velocity }: any) => {
     const swipe = Math.abs(offset.x) * velocity.x;
     
     if (swipe < -500) {
@@ -123,9 +123,10 @@ export const ExperienceCard = ({
                 {images.map((_, i) => (
                   <button
                     key={i}
+                    suppressHydrationWarning={true}
                     onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
                     aria-label={`Go to image ${i + 1}`}
-                    className={`transition-all duration-300 rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-purple-500 ${
+                    className={`transition-all duration-300 rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-purple-500 p-1.5 ${
                       i === current 
                         ? "w-3 h-3 bg-gradient-to-r from-purple-400 to-cyan-400 shadow-[0_0_8px_rgba(168,85,247,0.6)]" 
                         : "w-3 h-3 bg-white/40 hover:bg-white/60"
