@@ -21,15 +21,40 @@ export const Preloader = () => {
     // منع التمرير أثناء ظهور الـ Preloader
     document.body.style.overflow = "hidden";
 
-    // إخفاء الـ Preloader بعد 2.5 ثانية
-    const hideTimeout = setTimeout(() => {
+    let isMinimumTimePassed = false;
+    let isPageLoaded = false;
+
+    // حد أدنى 2 ثانية لعرض الـ Preloader
+    const minTimeTimeout = setTimeout(() => {
+      isMinimumTimePassed = true;
+      if (isPageLoaded) {
+        hidePreloader();
+      }
+    }, 2000);
+
+    // انتظار تحميل كل شيء (HTML, CSS, Images, Scripts)
+    const handleLoad = () => {
+      isPageLoaded = true;
+      if (isMinimumTimePassed) {
+        hidePreloader();
+      }
+    };
+
+    function hidePreloader() {
       setShowPreloader(false);
-      // إعادة تفعيل التمرير
       document.body.style.overflow = "auto";
-    }, 2500);
+    }
+
+    // إذا كانت الصفحة محملة بالفعل (cached)
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
 
     return () => {
-      clearTimeout(hideTimeout);
+      clearTimeout(minTimeTimeout);
+      window.removeEventListener("load", handleLoad);
       document.body.style.overflow = "auto";
     };
   }, []);
