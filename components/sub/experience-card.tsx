@@ -130,12 +130,14 @@ export const ExperienceCard = ({
                     suppressHydrationWarning={true}
                     onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
                     aria-label={`Go to image ${i + 1}`}
-                    className={`transition-all duration-300 rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-purple-500 p-1.5 ${
+                    className={`transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 min-w-[24px] min-h-[24px] flex items-center justify-center ${
                       i === current 
-                        ? "w-3 h-3 bg-gradient-to-r from-purple-400 to-cyan-400 shadow-[0_0_8px_rgba(168,85,247,0.6)]" 
-                        : "w-3 h-3 bg-white/40 hover:bg-white/60"
+                        ? "bg-gradient-to-r from-purple-400 to-cyan-400 shadow-[0_0_8px_rgba(168,85,247,0.6)]" 
+                        : "bg-white/40 hover:bg-white/60"
                     }`}
-                  />
+                  >
+                    <span className={`block rounded-full ${i === current ? "w-3 h-3" : "w-2.5 h-2.5"}`} />
+                  </button>
                 ))}
               </div>
             </>
