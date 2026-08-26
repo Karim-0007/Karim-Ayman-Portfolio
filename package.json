@@ -363,7 +363,7 @@
 
     
 
-  "react-dom": "19.2.6",
+  "react-dom": "19.2.8",
   
 
     
@@ -409,7 +409,7 @@
 
     
 
-  "@types/react-dom": "19.2.3",
+  "@types/react-dom": "19.2.4",
   
 
     
@@ -455,7 +455,7 @@
 
     
 
-  "@types/react-dom": "19.2.3"
+  "@types/react-dom": "19.2.4"
   
 
   }
