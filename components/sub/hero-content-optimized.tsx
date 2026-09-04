@@ -122,7 +122,7 @@ export const HeroContent = memo(() => {
 
           {/* Button 2 — Download CV */}
           <a
-            href="/PDF/Karim_Ayman_BIM Modeler & Technical_Office_Draftsman_CV.pdf"
+            href="/PDF/Karim_Ayman_Structural BIM Modeler& Technical_Office_Draftsman_CV .pdf"
             download
             className="group relative px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-white font-semibold text-[14px] sm:text-[15px] text-center cursor-pointer select-none overflow-hidden
               bg-[rgba(113,47,255,0.12)] border border-[#7042f88b]

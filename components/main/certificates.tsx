@@ -9,24 +9,14 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
 export const Certificates = () => {
   const [showAll, setShowAll] = useState(false);
-  const [isMobileView, setIsMobileView] = useState(false);
+  const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
-    // Check if mobile on client-side only
-    setIsMobileView(window.innerWidth < 768);
-    
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth < 768);
-    };
-    
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    setMounted(true);
   }, []);
-  
-  // Show only 2 certificates on mobile, all on desktop
-  const visibleCertificates = showAll || !isMobileView 
-    ? CERTIFICATES 
-    : CERTIFICATES.slice(0, 2);
+
+  // Always show all certificates (no mobile filtering to avoid hydration issues)
+  const visibleCertificates = showAll ? CERTIFICATES : CERTIFICATES;
 
   return (
     <section
@@ -78,48 +68,40 @@ export const Certificates = () => {
 
       {/* Cards grid */}
       <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8 max-w-full">
-        {visibleCertificates.map((cert, i) => (
-          <PdfCard
-            key={cert.title}
-            title={cert.title}
-            issuer={cert.issuer}
-            issuerLogo={"issuerLogo" in cert ? cert.issuerLogo : undefined}
-            year={"year" in cert ? cert.year : undefined}
-            certId={"certId" in cert ? cert.certId : undefined}
-            description={cert.description}
-            file={cert.file}
-            index={i}
-          />
-        ))}
+        {!mounted ? (
+          // Skeleton loader during SSR
+          Array.from({ length: 3 }).map((_, i) => (
+            <div 
+              key={i}
+              className="relative flex flex-col overflow-hidden rounded-2xl border border-[#2A0E61] bg-[rgba(3,0,20,0.92)] h-64 animate-pulse"
+            >
+              <div className="h-2 bg-gradient-to-r from-purple-600 via-cyan-400 to-transparent" />
+              <div className="p-5 space-y-3">
+                <div className="h-10 bg-purple-500/10 rounded" />
+                <div className="h-16 bg-purple-500/5 rounded" />
+                <div className="flex gap-2">
+                  <div className="h-10 bg-purple-500/10 rounded flex-1" />
+                  <div className="h-10 bg-purple-500/10 rounded flex-1" />
+                </div>
+              </div>
+            </div>
+          ))
+        ) : (
+          visibleCertificates.map((cert, i) => (
+            <PdfCard
+              key={cert.title}
+              title={cert.title}
+              issuer={cert.issuer}
+              issuerLogo={"issuerLogo" in cert ? cert.issuerLogo : undefined}
+              year={"year" in cert ? cert.year : undefined}
+              certId={"certId" in cert ? cert.certId : undefined}
+              description={cert.description}
+              file={cert.file}
+              index={i}
+            />
+          ))
+        )}
       </div>
-
-      {/* View More Button - Only on Mobile */}
-      {CERTIFICATES.length > 2 && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-8 md:hidden"
-        >
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="px-6 py-3 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/50 rounded-xl text-white font-semibold text-sm hover:from-purple-500/30 hover:to-cyan-500/30 transition-all duration-300 flex items-center gap-2 shadow-[0_0_20px_rgba(113,47,255,0.3)]"
-          >
-            {showAll ? (
-              <>
-                Show Less
-                <ChevronUpIcon className="w-5 h-5" />
-              </>
-            ) : (
-              <>
-                View All Certificates ({CERTIFICATES.length})
-                <ChevronDownIcon className="w-5 h-5" />
-              </>
-            )}
-          </button>
-        </motion.div>
-      )}
 
       {/* Subtle background glow */}
       <div className="w-full h-full absolute top-0 left-0 z-[-10] pointer-events-none">

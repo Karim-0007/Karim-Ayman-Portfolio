@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ChevronDownIcon, ChevronUpIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import SpecularButton from "@/components/ui/SpecularButton";
 
 type SliderImage = { src: string; label?: string };
 
@@ -112,31 +111,31 @@ export const ExperienceCard = ({
                 aria-label="Previous image"
                 className="absolute left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                <ChevronLeftIcon className="w-4 h-4" />
+                <ChevronLeftIcon className="w-5 h-5" />
               </button>
               <button
                 onClick={() => go(1)}
                 aria-label="Next image"
                 className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                <ChevronRightIcon className="w-4 h-4" />
+                <ChevronRightIcon className="w-5 h-5" />
               </button>
 
               {/* pagination dots - enhanced */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2 bg-black/80 rounded-full px-3 py-2 border border-white/10">
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex items-center justify-center gap-2 bg-black/80 rounded-full px-3 py-2 border border-white/10">
                 {images.map((_, i) => (
                   <button
                     key={i}
                     suppressHydrationWarning={true}
                     onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
                     aria-label={`Go to image ${i + 1}`}
-                    className={`transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 min-w-[24px] min-h-[24px] flex items-center justify-center ${
+                    className={`transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 w-[0.8rem] h-[0.8rem] flex items-center justify-center ${
                       i === current 
                         ? "bg-gradient-to-r from-purple-400 to-cyan-400 shadow-[0_0_8px_rgba(168,85,247,0.6)]" 
                         : "bg-white/40 hover:bg-white/60"
                     }`}
                   >
-                    <span className={`block rounded-full ${i === current ? "w-3 h-3" : "w-2.5 h-2.5"}`} />
+                    <span className={`block rounded-full ${i === current ? "w-2 h-2" : "w-1.5 h-1.5"}`} />
                   </button>
                 ))}
               </div>
@@ -169,62 +168,51 @@ export const ExperienceCard = ({
         </div>
 
         {/* preview bullets */}
-        <ul className="space-y-2 mb-4">
+        <div className="space-y-2 mb-4" suppressHydrationWarning={true}>
           {preview.map((point, i) => (
-            <li key={i} className="flex items-start gap-2 text-[13px] text-gray-300 leading-relaxed">
-              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gradient-to-br from-purple-400 to-cyan-400 flex-shrink-0" />
+            <p key={i} className="text-[13px] text-gray-300 leading-relaxed">
               {point}
-            </li>
+            </p>
           ))}
-        </ul>
+        </div>
 
         {/* expandable details */}
         <AnimatePresence initial={false}>
           {isExpanded && (
-            <motion.ul
+            <motion.div
               key="details"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.35, ease: "easeInOut" }}
-              className="space-y-2 mb-4 overflow-hidden"
+              transition={{ 
+                duration: 0.35, 
+                ease: "easeInOut",
+                height: { duration: 0.35 }
+              }}
+              className="mb-4 overflow-hidden"
             >
-              {details.map((point, i) => (
-                <li key={i} className="flex items-start gap-2 text-[13px] text-gray-400 leading-relaxed">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-cyan-500/60 flex-shrink-0" />
-                  {point}
-                </li>
-              ))}
-            </motion.ul>
+              <div className="space-y-2 py-2">
+                {details.map((point, i) => (
+                  <p key={i} className="text-[13px] text-gray-400 leading-relaxed">
+                    • {point}
+                  </p>
+                ))}
+              </div>
+            </motion.div>
           )}
         </AnimatePresence>
 
         {/* toggle button */}
         {details.length > 0 && (
-          <SpecularButton
-            size="sm"
-            radius={99}
-            tint="#7c3aed"
-            tintOpacity={0.06}
-            lineColor="#a78bfa"
-            baseColor="#4c1d95"
-            intensity={1}
-            shineSize={14}
-            shineFade={50}
-            thickness={1}
-            followMouse
-            proximity={180}
-            textColor="#c4b5fd"
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="mt-auto self-start border border-purple-500/30 bg-purple-950/20"
+            className="mt-auto self-start px-4 py-2 rounded-full border border-purple-500/30 bg-purple-950/20 text-purple-300 hover:bg-purple-900/30 transition-all duration-200 text-sm font-medium flex items-center gap-1.5 hover:border-purple-400/50 hover:text-purple-200"
           >
-            <span className="flex items-center gap-1.5">
-              {isExpanded ? "Show Less" : "See More Details"}
-              {isExpanded
-                ? <ChevronUpIcon className="h-3.5 w-3.5" />
-                : <ChevronDownIcon className="h-3.5 w-3.5" />}
-            </span>
-          </SpecularButton>
+            {isExpanded ? "Show Less" : "See More Details"}
+            {isExpanded
+              ? <ChevronUpIcon className="h-3.5 w-3.5" />
+              : <ChevronDownIcon className="h-3.5 w-3.5" />}
+          </button>
         )}
       </div>
     </motion.div>

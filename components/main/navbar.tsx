@@ -9,7 +9,7 @@ import Link from "next/link";
 import { NAV_LINKS, SOCIALS } from "@/constants";
 
 const CV_PATH =
-  "/PDF/Karim_Ayman_BIM Modeler & Technical_Office_Draftsman_CV.pdf";
+  "/PDF/Karim_Ayman_Structural BIM Modeler& Technical_Office_Draftsman_CV .pdf";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
