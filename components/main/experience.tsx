@@ -6,24 +6,24 @@ import { ExperienceCard } from "@/components/sub/experience-card";
 
 const EXPERIENCE_DATA = [
   {
-    company: "Hassan Allam Construction — El Dabaa NPP (Units 3 & 4)",
-    role: "BIM Modeler & Technical Office Draftsman",
+    company: "Hassan Allam Construction (HAC) — El Dabaa NPP (Units 3 & 4)",
+    role: "Structural BIM Technician (Modeler) | Technical Office Draftsman",
     period: "Feb 2023 – Present",
     location: "El Dabaa, Egypt",
     preview: [
-      "Developed 500+ approved shop drawings for structural and waterproofing systems under strict Rosatom/NPPA nuclear compliance.",
-      "Built 3D BIM models (LOD 350) for clash detection, resolving site execution issues early.",
-      "Prepared accurate As-Built documentation (LOD 500) and supported formal NPPA quality audits.",
+      "Developed 4+ structural 3D Revit models from scratch and from consultant-provided models, progressing from LOD 350 to LOD 400 per project requirements.",
+      "Produced 300+ As-Built drawings covering reinforcement, waterproofing systems, and repair stages, integrating verified site data into final documentation.",
+      "Created 120+ Bar Bending Schedules (BBS) for execution-ready structural elements under strict GOST, Rosatom, and NPPA nuclear compliance.",
     ],
     details: [
-      "Prepared detailed reinforcement shop drawings and Bar Bending Schedules (BBS) directly from DDD packages.",
-      "Translated Work Execution Plans (WEP) into accurate bay boundaries and sequential waterproofing details.",
-      "Resolved technical site RFIs with Egyptian & Russian engineering teams while preserving design intent.",
-      "Applied BIM workflows (LOD 200–300) for conceptual modeling and automated quantity takeoff (QTO).",
+      "Applied Work Execution Plans (WEP) to bay boundaries, construction joints, and waterproofing interfaces across 30+ concrete bays.",
+      "Coordinated with Egyptian and Russian engineering teams to resolve 150+ site RFIs and implement approved technical changes while maintaining design intent.",
+      "Performed Revit model audits and warnings management to maintain model health, consistency, and quality across structural packages.",
+      "Guided and reviewed the work of junior draftsmen, providing technical feedback on drafting methods and project standards.",
     ],
     images: [
       { src: "/projects/El Dabaa Nuclear Power Plant(3,4)/MAIN REACTOR UNIT 3.png", label: "Main Reactor Unit 3 — Overview" },
-      { src: "/projects/El Dabaa Nuclear Power Plant(3,4)/3D Model .jpg", label: "3D BIM Model (LOD 350)" },
+      { src: "/projects/El Dabaa Nuclear Power Plant(3,4)/3D Model .jpg", label: "3D BIM Model (LOD 400)" },
       { src: "/projects/El Dabaa Nuclear Power Plant(3,4)/DETAILS OF RAINFORCEMENT WALL.png", label: "Reinforcement Wall Details" },
       { src: "/projects/El Dabaa Nuclear Power Plant(3,4)/GENERAL NUCLEAR POWER PLANT VIEW IN THE FUTURE.png", label: "Future Plant General View" },
       { src: "/projects/El Dabaa Nuclear Power Plant(3,4)/Reactor Core 2.png", label: "Reactor Core" },
@@ -36,13 +36,13 @@ const EXPERIENCE_DATA = [
     period: "Mar 2022 – Feb 2023",
     location: "El Dabaa, Egypt",
     preview: [
-      "Extracted 150+ high-precision structural shop drawings & complex rebar configurations from DDDs.",
-      "Drafted specialized execution drawings for 40+ concrete bays following Work Execution Plans (WEP).",
-      "Delivered final As-Built drawings with verified field measurements, achieving an impressive 5% rejection rate.",
+      "Developed structural shop drawings and complex reinforcement configurations directly from DDD packages for nuclear construction works.",
+      "Prepared execution drawings for concrete bays per the Work Execution Plan (WEP), including sensor locations, feed points, and construction joints.",
+      "Reviewed and revised reinforcement shop drawings to resolve complex clashes and convert approved technical solutions into execution-ready layouts.",
     ],
     details: [
-      "Revised rebar shop drawings under tight deadlines, solving 80+ complex reinforcement clashes to eliminate material waste.",
-      "Managed 200+ Red-Line Markups and site RFIs using AutoCAD while maintaining strict CAD standards & version control.",
+      "Produced structural sections, elevations, and construction layouts in AutoCAD, incorporating red-line markups and site RFI changes while maintaining drawing standards and version control.",
+      "Coordinated with the Russian engineering team and surveying engineers to prepare final As-Built drawings from verified field measurements.",
     ],
     images: [
       { src: "/projects/El Dabaa Nuclear Power Plant(1)/MAIN REACTOR UNIT 1.png", label: "Main Reactor Unit 1 — Overview" },
@@ -52,17 +52,17 @@ const EXPERIENCE_DATA = [
     ],
   },
   {
-    company: "Orascom Construction — Abu Rewash WWTP",
+    company: "Orascom Construction PLC — Abu Rewash WWTP",
     role: "Technical Office Draftsman",
     period: "May 2021 – Mar 2022",
     location: "Giza, Egypt",
     preview: [
-      "Drafted P&ID diagrams for water treatment processes in coordination with mechanical teams.",
-      "Produced detailed reinforced concrete structural drawings for water tanks and plant facilities.",
-      "Documented final As-Built conditions, helping reduce RFI submissions by 25% during closeout.",
+      "Drafted P&ID diagrams for water treatment processes from mechanical engineering inputs.",
+      "Produced reinforced-concrete structural drawings and shop drawings for water tanks and plant facilities.",
+      "Developed mechanical equipment layouts and piping route drawings with interdisciplinary coordination.",
     ],
     details: [
-      "Developed mechanical equipment layouts and piping route drawings with interdisciplinary coordination.",
+      "Prepared final As-Built documentation for piping and structural elements.",
     ],
     images: [
       { src: "/projects/Abu Rewash Wastewater Treatment Plant/MAIN Abu Rewash Wastewater Treatment Plant.png", label: "Plant Overview" },
@@ -113,7 +113,7 @@ export const Experience = () => {
           Experience & Credentials
         </h2>
         <p className="text-gray-400 text-center mt-2 sm:mt-3 max-w-[600px] text-[13px] sm:text-[15px] leading-6 sm:leading-7">
-          5+ years delivering precision engineering documentation on Egypt's most technically demanding infrastructure projects.
+          Structural BIM Technician (Modeler) and Technical Office Draftsman with 5+ years of experience in structural drafting, BIM modeling, reinforcement detailing, and construction documentation.
         </p>
       </motion.div>
 
