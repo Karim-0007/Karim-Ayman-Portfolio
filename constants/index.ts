@@ -304,6 +304,16 @@ export const NAV_LINKS = [
 
 export const CERTIFICATES = [
   {
+    title: "Autodesk Revit 01: Structure Modeling",
+    issuer: "Hassan Allam Holding",
+    issuerLogo: "/skills/revit-icon.svg",
+    year: "2026",
+    certId: "",
+    description:
+      "Advanced Revit Structure workflow certification covering structural modeling techniques, WEP implementation, and BIM coordination standards.",
+    file: "/Certificate/Autodesk Revit 01_ STRUCTURE -MODELING Certificate (Workflow).pdf",
+  },
+  {
     title: "Revit Architecture Essential",
     issuer: "Autodesk Training Center",
     issuerLogo: "/skills/revit-icon.svg",

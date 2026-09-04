@@ -110,16 +110,16 @@ export const ExperienceCard = ({
               <button
                 onClick={() => go(-1)}
                 aria-label="Previous image"
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                <ChevronLeftIcon className="w-5 h-5" />
+                <ChevronLeftIcon className="w-4 h-4" />
               </button>
               <button
                 onClick={() => go(1)}
                 aria-label="Next image"
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-black/70 border border-white/20 text-white hover:bg-purple-700/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                <ChevronRightIcon className="w-5 h-5" />
+                <ChevronRightIcon className="w-4 h-4" />
               </button>
 
               {/* pagination dots - enhanced */}
