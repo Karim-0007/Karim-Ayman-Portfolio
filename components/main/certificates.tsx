@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/lib/motion";
 import { PdfCard } from "@/components/sub/pdf-card";
@@ -9,9 +9,21 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
 export const Certificates = () => {
   const [showAll, setShowAll] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
+  
+  useEffect(() => {
+    // Check if mobile on client-side only
+    setIsMobileView(window.innerWidth < 768);
+    
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth < 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   // Show only 2 certificates on mobile, all on desktop
-  const isMobileView = typeof window !== 'undefined' && window.innerWidth < 768;
   const visibleCertificates = showAll || !isMobileView 
     ? CERTIFICATES 
     : CERTIFICATES.slice(0, 2);
