@@ -149,7 +149,8 @@ export const HeroContent = memo(() => {
         style={{ willChange: "transform, opacity" }}
       >
         <motion.div
-          whileHover={{ scale: 1.05, opacity: 0.9 }}
+          initial={{ opacity: 0.8 }}
+          whileHover={{ scale: 1.05, opacity: 1 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           style={{ willChange: "transform, opacity" }}
           className="relative"
@@ -161,7 +162,8 @@ export const HeroContent = memo(() => {
             width={750}
             draggable={false}
             priority
-            className="box select-none w-[400px] h-auto object-bottom border-4 border-[#7042f88b] rounded-full opacity-70"
+            suppressHydrationWarning
+            className="box select-none w-[400px] h-auto object-bottom border-4 border-[#7042f88b] rounded-full"
             style={{ transform: "translateZ(0)" }}
           />
           <motion.div

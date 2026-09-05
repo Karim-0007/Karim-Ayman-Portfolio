@@ -135,7 +135,7 @@ export const HeroContent = () => {
           width={750}
           draggable={false}
           priority
-          className="box select-none w-[400px] h-auto cursor-pointer object-bottom border-4 border-[#7042f88b] rounded-full opacity-[0.7] transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-90 hover:border-purple-500/50"
+          className="box select-none w-[400px] h-auto cursor-pointer object-bottom border-4 border-[#7042f88b] rounded-full opacity-80 transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-100 hover:border-purple-500/50"
         />
       </motion.div>
     </motion.div>
